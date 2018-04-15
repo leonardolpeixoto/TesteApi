@@ -10,6 +10,6 @@ npm start
 
 ## Authors
 
-* **Marcelino Matias**
+* **Leonardo**
 
 

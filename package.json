@@ -6,13 +6,16 @@
   "author": "Leonardo Peixoto <leonardodelimapeixoto@gmail.com>",
   "license": "MIT",
   "os": ["linux"],
+  "engines": {
+    "node": "8.10.0"
+  },
   "directories": {
     "tests": "tests",
     "src": "src"
   },
   "scripts": {
     "start": "nodemon src/server.js --exec babel-node",
-    "build": "babel src/ -d dist --copy-files",
+    "build": "babel src/ -d dist",
     "server": "pm2 start ./dist/server.js",
     "stop-server": "pm2 stop ./dist/server.js",
     "test-integration": "NODE_ENV=test mocha --opts tests/mocha.opts tests/integration/**/*.js",
