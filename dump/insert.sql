@@ -32,22 +32,22 @@ INSERT INTO `teste_api`.`Venda_has_Produto` (`vendaId`, `produtoId`) VALUES ('19
 INSERT INTO `teste_api`.`Venda_has_Produto` (`vendaId`, `produtoId`) VALUES ('20', '1');
 
 
-use teste_api;
+-- use teste_api;
 
-select c.nome, count(p.id) / (
-	select count(p.descricao)  from Venda_has_Produto as vhp
-		inner join Venda   as v on (v.id = vhp.vendaId)
-			inner join Produto as p on (p.id = vhp.produtoId)
-				inner join Cliente as c on (c.id = v.clienteId)
-		where p.descricao like 'Tv'
-		group by p.descricao
-	) as total
+-- select c.nome, count(p.id) / (
+-- 	select count(p.descricao)  from Venda_has_Produto as vhp
+-- 		inner join Venda   as v on (v.id = vhp.vendaId)
+-- 			inner join Produto as p on (p.id = vhp.produtoId)
+-- 				inner join Cliente as c on (c.id = v.clienteId)
+-- 		where p.descricao like 'Tv'
+-- 		group by p.descricao
+-- 	) as total
 	
-    from Venda_has_Produto as vhp
-		inner join Venda   as v on (v.id = vhp.vendaId)
-			inner join Produto as p on (p.id = vhp.produtoId)
-				inner join Cliente as c on (c.id = v.clienteId)
+--     from Venda_has_Produto as vhp
+-- 		inner join Venda   as v on (v.id = vhp.vendaId)
+-- 			inner join Produto as p on (p.id = vhp.produtoId)
+-- 				inner join Cliente as c on (c.id = v.clienteId)
     
-    where p.descricao like 'Tv'
+--     where p.descricao like 'Tv'
     
-    group by c.nome;
+--     group by c.nome;
