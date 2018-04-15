@@ -79,7 +79,7 @@ var authentication = (0, _auth2.default)(app);
 app.set('authenticate', authentication.authenticate());
 app.use(authentication.initialize());
 
-(0, _consign2.default)({ cwd: 'src' }).then('routes').into(app);
+(0, _consign2.default)({ cwd: 'dist' }).then('routes').into(app);
 
 app.use(function (req, res, next) {
   var err = new Error('Not Found');
