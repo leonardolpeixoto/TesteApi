@@ -1,0 +1,8 @@
+{
+  "apps" : [{
+    "name"       : "Chat-Vocalix",
+    "script"     : "./dist/server.js",
+    "instances"  : 4,
+    "exec_mode"  : "fork"
+  }]
+}
