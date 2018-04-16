@@ -39,6 +39,7 @@ module.exports = function(sequelize, DataTypes) {
         " where p.id = :produtoId " +
         
         " group by c.nome " +
+        " order by quantidade desc " +
         " limit 5";
 
 
